@@ -1,0 +1,12 @@
+{
+  "name": "pi-mcp-pdf2md",
+  "version": "1.0.0",
+  "description": "MCP server for pdf2md — AI-optimized PDF to Markdown conversion",
+  "type": "module",
+  "bin": {
+    "mcp-pdf2md": "./pdf2md-server.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0"
+  }
+}
