@@ -2,7 +2,7 @@
 
 MCP server for AI-optimized PDF to Markdown conversion using [pdf2md](https://github.com/pdf-inspector/pdf2md).
 
-> **Requires [pi-mcp-bridge](https://github.com/timaliev/pi-mcp-bridge)** to connect to pi.
+> **Requires [pi-mcp-bridge](https://github.com/timaliev/pi-mcp-bridge)** to connect to [pi](https://pi.dev).
 
 ## Prerequisites
 
@@ -38,6 +38,8 @@ In `~/.pi/agent/settings.json`:
 ```
 
 ### Standalone MCP client
+
+In `~/.mcp.json`:
 
 ```json
 {
