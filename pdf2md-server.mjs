@@ -6,7 +6,7 @@ import {
   ListToolsRequestSchema,
 } from "@modelcontextprotocol/sdk/types.js";
 import { spawn } from "child_process";
-import { existsSync } from "fs";
+import { existsSync, readFileSync } from "fs";
 
 const PDF2MD = "/Users/tima/.cargo/bin/pdf2md";
 
@@ -158,6 +158,12 @@ function runPdf2md(args) {
 
     child.on("error", reject);
   });
+}
+
+if (process.argv.includes("--version")) {
+  const pkg = JSON.parse(readFileSync(new URL("./package.json", import.meta.url), "utf-8"));
+  console.log(`mcp-pdf2md ${pkg.version}`);
+  process.exit(0);
 }
 
 const transport = new StdioServerTransport();
