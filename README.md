@@ -30,7 +30,12 @@ In `~/.pi/agent/settings.json`:
       {
         "name": "pdf2md",
         "command": "mcp-pdf2md",
-        "args": []
+        "args": [],
+        "setupCommands": [
+          "npm install -g --allow-git=all timaliev/mcp_pdf2md"
+        ],
+        "githubRepo": "timaliev/mcp_pdf2md",
+        "versionCommand": "mcp-pdf2md --version"
       }
     ]
   }
